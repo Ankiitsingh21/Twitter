@@ -13,7 +13,7 @@ app.listen(3000, async ()=>{
         //        //userEmail : 'ankitsingh@gmail.com'
         //});
         //const tweets=await Tweet.find({userEmail:'ankitsingh@gmail.com'});
-        //const TweetRepo = new TweetRepository();
+        const TweetRepo = new TweetRepository();
         //const tweet = await TweetRepo.create({content:'myTweet'});
         //tweet.comments.push({content:'first comment'});
         //await tweet.save();
@@ -22,6 +22,6 @@ app.listen(3000, async ()=>{
         //const comment = await Comment.create({content:'new Comment'});
         //tweet.comments.push(comment);
         //await tweet.save();
-        //const tweet= await TweetRepo.getWithComments('665f63e36b043d47f1e1130b');
-        //console.log(tweet);
+        const tweet= await TweetRepo.getAll(2,1);
+        console.log(tweet);
 }); 

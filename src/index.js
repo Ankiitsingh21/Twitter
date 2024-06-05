@@ -1,7 +1,7 @@
 const express = require('express');
 const connect = require('./config/database');
 const app = express();
-const TweetRepository=require('./repository/tweet-reqpository');
+const TweetRepository=require('./repository/tweet-repository');
 const Comment = require('./models/comment');
 
 app.listen(3000, async ()=>{
@@ -13,7 +13,7 @@ app.listen(3000, async ()=>{
         //        //userEmail : 'ankitsingh@gmail.com'
         //});
         //const tweets=await Tweet.find({userEmail:'ankitsingh@gmail.com'});
-        const TweetRepo = new TweetRepository();
+        //const TweetRepo = new TweetRepository();
         //const tweet = await TweetRepo.create({content:'myTweet'});
         //tweet.comments.push({content:'first comment'});
         //await tweet.save();
@@ -22,6 +22,7 @@ app.listen(3000, async ()=>{
         //const comment = await Comment.create({content:'new Comment'});
         //tweet.comments.push(comment);
         //await tweet.save();
-        const tweet= await TweetRepo.getAll(2,1);
-        console.log(tweet);
+        //const tweet= await TweetRepo.getAll(0,0);
+        ////const tweet = await TweetRepo.create({content :'With hooks now'});
+        //console.log(tweet[0].contentWithEmail);
 }); 

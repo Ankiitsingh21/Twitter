@@ -9,8 +9,8 @@ app.listen(3000, async ()=>{
         await connect();
         console.log(`Mongo db connected`);
         let ser = new service();
-        await ser.create({
-                content:"done with #refractor",
-        })
+        // await ser.create({
+        //         content:"hey #wow",
+        // })
 
 }); 

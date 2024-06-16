@@ -5,7 +5,7 @@ class CrudRepository{
 
         async create(data){
                 try {
-                       const result = await thid.model.create(data);
+                       const result = await this.model.create(data);
                        return result; 
                 } catch (error) {
                         console.log("Something went wrong");
@@ -36,6 +36,7 @@ class CrudRepository{
         async get(id){
                 try {
                         const result = await this.model.findById(id);
+                        console.log('crud repo',result);
                         return result;
                 } catch (error) {
                         console.log("Something went wrong");

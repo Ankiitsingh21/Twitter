@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Like from "./like";
+import Like from "./like.js";
 
 const userSchema= new mongoose.Schema({
         email:{
@@ -19,4 +19,4 @@ const userSchema= new mongoose.Schema({
 
 const User= mongoose.model('User', userSchema);
 
-export default Like;
+export default User;

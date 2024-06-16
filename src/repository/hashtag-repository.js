@@ -27,8 +27,8 @@ class HashtagRepository{
         }
         async destroy(id){
                 try {
-                        const tag = await Hashtag.findByIdAndRemove(id);
-                        return tags;
+                        const tag = await Hashtag.findByIdAndDelete(id);
+                        return tag;
                 } catch (error) {
                         console.log(error);
                 }

@@ -38,6 +38,16 @@ class TweetService {
             throw error;
         }
     }
+
+    async getTweets(){
+        try {
+            const tweet = await this.tweetRepository.getAll();
+            return tweet;
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
+    }
 }
 
 export default TweetService;

@@ -22,3 +22,23 @@ export const createTweet=async(req,res)=>{
                 });
         }
 }
+
+export const getTweets=async(req,res)=>{
+        try {
+                const response = await tweetService.getTweets();
+                return res.status(201).json({
+                        success: "True",
+                        message: "Succesfully get all tweet",
+                        data : response,
+                        err:{}
+                });
+        } catch (error) {
+                console.log(error);
+                return res.status(501).json({ 
+                        success: "false",
+                        message: "Not able to get a  tweet",
+                        data: {},
+                        err:{error}
+                });
+        }
+}

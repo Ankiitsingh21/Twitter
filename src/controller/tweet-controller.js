@@ -42,3 +42,23 @@ export const getTweets=async(req,res)=>{
                 });
         }
 }
+
+export const getTweetswithComment=async(req,res)=>{
+        try {
+                const response = await tweetService.getTweetswithComment(req.params.id);
+                return res.status(201).json({
+                        success: "True",
+                        message: "Succesfully get  tweet",
+                        data : response,
+                        err:{}
+                });
+        } catch (error) {
+                console.log(error);
+                return res.status(501).json({ 
+                        success: "false",
+                        message: "Not able to get   tweet",
+                        data: {},
+                        err:{error}
+                });
+        }
+}

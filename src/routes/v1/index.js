@@ -4,6 +4,7 @@ import {createTweet,getTweets,getTweetswithComment}  from '../../controller/twee
 import {toggleLike} from '../../controller/like-controller.js';
 import { createComment } from '../../controller/comment-controller.js';
 // import {getTweetswithComment} from '../../controller/tweet-controller.js';
+import { signup } from '../../controller/user-controller.js';
 
 const router = express.Router();
 
@@ -13,5 +14,7 @@ router.get('/tweets/:id',getTweetswithComment);
 
 router.post('/likes/toggle',toggleLike);
 router.post('/comments',createComment);
+
+router.post('/users',signup);
 
 export default router;
